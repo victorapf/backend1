@@ -18,8 +18,8 @@ def cotizar():
         monto = get_km(distancia_km)
 
         return jsonify({
-            'distancia_km': round(distancia_km, 2),
-            'monto': monto
+            'distancia_km': f'{round(distancia_km, 2)}km',
+            'monto': f'${monto}'
         })
     except Exception as e:
         return jsonify({'error': str(e)}), 500
