@@ -17,11 +17,6 @@ def cotizar():
     lat_a, lng_a = get_lat_long_from_maps_url(punto_a)
     lat_b, lng_b = get_lat_long_from_maps_url(punto_b)
 
-    print("URL A:",punto_a)
-    print("Coordenadas A:", lat_a, lng_a)
-    print("URL B:", punto_b)
-    print("Coordenadas B:", lat_b, lng_b)
-
     if None in [lat_a, lng_a, lat_b, lng_b]:
         return jsonify({'error': 'No se pudieron extraer coordenadas válidas'}), 400
 
